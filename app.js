@@ -14,18 +14,18 @@ const app = express()
 
 
 //connectDB
-const connectDB = require('./final/db/connect')
-const authenticateUser = require('./final/middleware/authentication')
+const connectDB = require('./db/connect')
+const authenticateUser = require('./middleware/authentication')
 
 //routers
 
-const authRouter = require('./final/routes/auth')
-const jobsRouter = require('./final/routes/jobs')
+const authRouter = require('./routes/auth')
+const jobsRouter = require('./routes/jobs')
 
 //error handler
 
-const notFoundMiddleware = require('./final/middleware/not-found')
-const errorHandlerMiddleware = require('./final/middleware/error-handler')
+const notFoundMiddleware = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.set('trust proxy', 1);
 app.use(
